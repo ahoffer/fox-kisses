@@ -1,3 +1,4 @@
+library(caret)
 # Second Data Set
 # Look at web site and download data
 # https://archive.ics.uci.edu/ml/datasets/Leaf
@@ -71,8 +72,7 @@ speciesLabels = c(
   "Aesculus californica",
   "Chelidonium majus",
   "Schinus terebinthifolius",
-  "Fragaria vesca"
-)
+  "Fragaria vesca")
 
 # Create factor from species number and supplemental labels.
 cleanData = data

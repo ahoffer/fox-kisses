@@ -59,9 +59,8 @@ Why all the hype?
   
 ## Machine Learning
 - Classification and Regression
-- Linear Regression
 - Positives and Negatives, False and True
-- Bias-variance
+- Bias versus variance, weak/strong learners, over/under fit
 
 ## The Iris Data Set
 - Working with data frames in R
