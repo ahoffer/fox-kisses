@@ -18,7 +18,7 @@ In practice, you do the same things to big data as you to do data:
 
 1. Get data
 1. Explore data
-1. Pre-process data
+1. _Munge_ and Partition the data
 1. Train (machine learing)
 1. Predict (machine learnign)
 1. Evaluate
