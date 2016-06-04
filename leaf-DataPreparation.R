@@ -4,10 +4,11 @@ library(caret)
 # https://archive.ics.uci.edu/ml/datasets/Leaf
 
 # Load data 
-#- Read data with no additional parameters
+#-Read data with no additional parameters. Doesn't looks great.
+read.csv("leaf.csv") 
 
-#- Read data and provider header names
-read.csv("leaf.csv")
+
+#-Read data and provider header names
 data = read.csv(
   "leaf.csv",
   header = FALSE,

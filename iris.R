@@ -10,6 +10,7 @@ set.seed(1)
 
 ##### Get Data #####
 # The data is already here!
+#https://en.wikipedia.org/wiki/Iris_flower_data_set
 iris
 
 ##### Explore #####
@@ -27,7 +28,7 @@ class('a')
 class(iris$Species)
 
 # Factors. 'Cause most statistician come out of the social sciences.
-str(iris$Species)
+levels(iris$Species)
 
 ### Accessing values in data frames ####
 # read cran.r-project.org/doc/manuals/r-release/R-intro.html
@@ -54,24 +55,28 @@ iris[iris$Sepal.Length > 7.5, ]$Species
 ##### Visualize the data #####
 # Trellis plot of iris data
 transparentTheme(trans = 0.4)
-featurePlot(x = iris[,-5],
-            y = iris$Species,
-            plot = "pair",
-            auto.key = list(columns = 3))
+featurePlot(
+  x = iris[, 1:4],
+  y = iris$Species,
+  plot = "pairs",
+  auto.key = list(columns = 3)
+)
+
 
 ##### Parition the data! #####
-# Create Training and Test Sets 
+# Create Training and Test Sets
 ?createDataPartition
-trainingIndexes = createDataPartition(iris$Species, p = 0.8, list = FALSE)
+
+# Parition function guarantees representive number of samples
+trainingIndexes = createDataPartition(iris$Species, p = 0.75, list = FALSE)
+
 trainingSet = iris[trainingIndexes, ]
 testSet = iris[-trainingIndexes, ]
 
 ##### Train! - Decision Tree #####
 # Create a model by defining the independent and dependent variables
 model = Species ~ .
-
-# Create a decision tree to classify samples of irises
-decisionTree = train(model, trainingSet, method="ctree")
+decisionTree = train(model, trainingSet, method = "ctree")
 
 # Decision trees are human-readable and very intuitive
 plot(decisionTree$finalModel)
@@ -87,9 +92,7 @@ confusionMatrix(testPredictions, testSet$Species)
 
 # WHAT HAPPENS if we just guess "setosa" for everything?
 # Effect on Accuracy? Effect on Kappa? Effecton P-Value?
-confusionMatrix(
-  rep("setosa", length(testPredictions)), 
-  testSet$Species)
+confusionMatrix(rep("setosa", length(testPredictions)),                 testSet$Species)
 
 # WHAT HAPPENS if we guess randomly? (WITHOUT replacement)
 guessesWithCorrectProportions = sample(testSet$Species, length(testPredictions))
@@ -98,3 +101,9 @@ confusionMatrix(guessesWithCorrectProportions,  testSet$Species)
 # WHAT HAPPENS if we guess randomly? (WITH replacment)
 guesses = sample(testSet$Species, length(testPredictions), replace = TRUE)
 confusionMatrix(guesses,  testSet$Species)
+
+
+########### Perfect learner ##############
+parameters = ctree_control(minbucket = 5)
+decisionTree = train(model, trainingSet, method = "ctree", controls = parameters)
+
