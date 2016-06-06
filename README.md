@@ -11,6 +11,7 @@
 - Leaf Data Set
 - PCA
 - How do we do better?
+- Resources
 
 ## Big Data versus Data
 Before there was big data, there was just data.  Big Data is just data that can’t fit into the memory of one computer. 
@@ -92,3 +93,20 @@ Why all the hype?
 - Feature selection
 - Algorithms
 - Big data
+
+## Resources
+
+### Introduction to other ML algorithms
+ - Andrew Ng's Machine Learning course. Amazingly good and highly recommended https://www.coursera.org/learn/machine-learning
+ - Broad survey of supervised and unsupervised learning algorithms.  https://dzone.com/refcardz/machine-learning-predictive
+ 
+### Learning R
+  - Of the zillion "intro to R" resources, I recommend:
+  https://cran.r-project.org/doc/manuals/R-intro.pdf
+  - Learn R online at Coursera
+  - Or Learn R online at DataCamp 
+  - Or ditch R and learn Python Pandas! http://pandas.pydata.org/
+  
+### Competitions and Challenges
+  - Kaggle. Great place to get started.
+  - Driven Data (https://www.drivendata.org/competitions/)
