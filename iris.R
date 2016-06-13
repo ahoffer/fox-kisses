@@ -83,13 +83,14 @@ model = Species ~ .
 #                            stump = FALSE, nresample = 9999, maxsurrogate = 0, 
 #                            mtry = 0, savesplitstats = TRUE, maxdepth = 0)
 
-parameters = ctree_control(teststat = c("max"), 
-                           testtype = c("MonteCarlo"), 
-                           mincriterion = 0.95, minsplit = 20, minbucket = 7, 
-                           stump = FALSE, nresample = 9999)
+# parameters = ctree_control(teststat = c("max"), 
+#                            testtype = c("MonteCarlo"), 
+#                            mincriterion = 0.95, minsplit = 20, minbucket = 7, 
+#                            stump = FALSE, nresample = 9999)
 
 
-decisionTree = train(model, trainingSet, method="ctree", controls=parameters)
+# decisionTree = train(model, trainingSet, method="ctree", controls=parameters)
+decisionTree = train(model, trainingSet, method="ctree")
 
 # Decision trees are human-readable and very intuitive
 plot(decisionTree$finalModel)
@@ -116,3 +117,4 @@ confusionMatrix(guessesWithCorrectProportions,  testSet$Species)
 # WHAT HAPPENS if we guess randomly? (WITH replacment)
 guesses = sample(testSet$Species, length(testPredictions), replace = TRUE)
 confusionMatrix(guesses,  testSet$Species)
+

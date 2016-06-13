@@ -1,7 +1,13 @@
-
 # ~~Big~~ Data and Machine Learning with R
 
+This presentation is part introduction to R, part introduction to machine learning.
+The introduction gives an overview of data science and some thoughts on data versus big data. 
+  
+It suppposed to run about an hour. That means that everything is over simplified and half true. 
+
+
 ## Outline
+
 - Data Science
 - What is R?
 - Machine learning
@@ -14,14 +20,14 @@
 ## Data Science
 Before there was *big data* there was just *data*.  Big Data is just data that can’t fit into the memory of one computer. In practice, you do the same things to big data as you to do data.
   
-To be a real a data scientist you _should_ know about statistical distributions, hypothesis testing, linear regression, and design-of-experiments. T
+To be a real a data scientist you _should_ know about statistical distributions, hypothesis testing, linear regression, and design-of-experiments.
   
-The advent of machine learning has significally lowered the barrier to data science. Even if you _should_ know about one-tailed t-tests and the poisson distribution, you don't _have to_ to know.
+The advent of machine learning has significantly lowered the barrier to data science. Even if you _should_ know about one-tailed t-tests and the Poisson distribution, you don't _have to_ to know.
 
 1. Get data
 1. Explore data
 1. _Munge_ and Partition the data
-1. Train (machine learing)
+1. Train (machine learning)
 1. Predict (machine learning)
 1. Evaluate
 1. Profit!
@@ -32,15 +38,15 @@ We will step through the process with small data sets and the R statistical prog
 
 ### Strong signal
 
-Data used to come from carefully crafted and potentially expensive experiments. Think of drug trial studies, counting the number of salmon in a river, or launching rockets to gather dust samples from the stratophere. 
+Data used to come from carefully crafted and potentially expensive experiments. Think of drug trial studies, counting the number of salmon in a river, or launching rockets to gather dust samples from the stratosphere. 
   
-**Small data** was valuable because the experiments were designed to have a high _signal-to-noise ratio_. Mining knowledge from small data is like finding a gold nugget in your pan. Analyzing small data is something one person can do with a personal computer. This is the world the S programming language (which later became the R programming lanauge) was born into.
+**Small data** was valuable because the experiments were designed to have a high _signal-to-noise ratio_. Mining knowledge from small data is like finding a gold nugget in your pan. Analyzing small data is something one person can do with a personal computer. This is the world the S programming language (which later became the R programming language) was born into.
 
 ![](goldpan.png)
   
 ### Weak signal
 
-Mining **big data** (even if it comes from carefully design experiments) is like mining and refing low-grade gold ore. It takes a lot of processing to get anything valuable from it. It has a low _signal-to-noise ratio_. You need data centers and a group of people to manage everthing.
+Mining **big data** (even if it comes from carefully design experiments) is like mining and refininglow-grade gold ore. It takes a lot of processing to get anything valuable from it. It has a low _signal-to-noise ratio_. You need data centers and a group of people to manage everything.
 
 ![](ore-extraction.jpg)
 
@@ -90,6 +96,7 @@ Mining graphs is very different from mining traditional, tabular data. I do not 
 - Bias versus variance, weak/strong learners, over/under fit
 
 ## The Iris Data Set
+- The *caret* package
 - Working with data frames in R
 - Getting more info: class, dim, str, summary
 - Accessing rows and columns
@@ -145,7 +152,7 @@ You can! Sample your big data down to a small dataset.
 
 ```
 $ wc -l bigdata.csv
-     5000000000 leaf.csv
+     5000000000 bigdata.csv
      
 $ shuf bigdata.csv | head -n 100000 > smalldata.csv
 ```
