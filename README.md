@@ -1,4 +1,4 @@
-# Introduction to ~~Big~~ Data and Machine Learning with R
+# Introduction to Machine Learning with R
 
 This presentation is intended to last about an hour. We introduce data science its relationship to machine learning, and what "big data" means. Data science is cast as the search for useful information ("signal") in data. "Big data" is understood as the search for information in very large (and typically very noisy) data. 
   
