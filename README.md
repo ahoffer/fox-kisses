@@ -1,9 +1,10 @@
-# ~~Big~~ Data and Machine Learning with R
+# Introduction to ~~Big~~ Data and Machine Learning with R
 
-This presentation is part introduction to R, part introduction to machine learning.
-The introduction gives an overview of data science and some thoughts on data versus big data. 
+This presentation is intended to last about an hour. We introduce data science its relationship to machine learning, and what "big data" means. Data science is cast as the search for useful information ("signal") in data. "Big data" is understood as the search for information in very large (and typically very noisy) data. 
   
-It suppposed to run about an hour. That means that everything is over simplified and half true. 
+We will spend the majority of the time solving a classification problem using the programming language R. Classification is a common machine learning task where you train the computer to correctly identity something. We will use a machine learning library for R to train a decision tree to classify different species of plants. 
+
+Finally, we will talk about machine learning resources and how to tackle big data with a little computer. 
 
 
 ## Outline
@@ -67,11 +68,6 @@ Physicists have been mining big data for a long time. They build custom hardware
 <hr>
 ![](grupo-bimbo.png)  
   
-<hr>
-## Graph analytics
-Mining graphs is very different from mining traditional, tabular data. I do not know much about graph mining and I am not going to talk about it here. I do know that it is a growing field.
-
-![](network.png)
 
 <hr>
 
@@ -105,24 +101,7 @@ Mining graphs is very different from mining traditional, tabular data. I do not 
 - Fit the model to the training data
 - Confusion matrix
 - Other measurements of performance (accuracy, sensitivity, specificity, kappa)
-
-## The Leaf Dataset 
-- UCI ML Repository
-	- Browse
-	- Download 
-	- Read
-	- Load and prepare the data
-- Visualize
-	- Revisit the Iris data
-	- Trellis plot of high dimensional data
-- Learn 	
-	- Random Forest
-	- Ensemble learners
-- Visualize results	
-	- Confusion Matrix in Excel
-- Introducing Principle Component Analysis
-	- Trellis plot of low dimensional data
-  - Using the PCA data to train classifier
+- Guessing
 
 ## How do we do better?
 - Feature selection (Boruta package)
