@@ -1,8 +1,8 @@
 # Introduction to Machine Learning with R
 
-This presentation is intended to last about an hour. We introduce data science its relationship to machine learning, and what "big data" means. Data science is cast as the search for useful information ("signal") in data. "Big data" is understood as the search for information in very large (and typically very noisy) data. 
-  
-We will spend the majority of the time solving a classification problem using the programming language R. Classification is a common machine learning task where you train the computer to correctly identity something. We will use a machine learning library for R to train a decision tree to classify different species of plants. 
+This presentation is a non-theoretical introduction to machine learning. The presentation is intended to last about an hour. We start with a discussion of the biggest buzzwords in this field: data science, machine learning, and big data. We will have a high-level look at each one and why all three tend to come up in the same conversations. 
+
+We will spend the majority of the time solving a classification problem using the programming language R. Classification is a common machine learning task where a model is "trained" to identity something. We will use a machine learning library for R to train a decision tree to classify different species of plants. 
 
 Finally, we will talk about machine learning resources and how to tackle big data with a little computer. 
 
