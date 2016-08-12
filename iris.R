@@ -1,3 +1,4 @@
+# install.packages("caret")
 library(caret)
 # cran.r-project.org/web/packages/caret/vignettes/caret.pdf
 # topepo.github.io/caret/index.html
@@ -10,7 +11,7 @@ set.seed(1)
 
 ##### Get Data #####
 # The data is already here!
-#https://en.wikipedia.org/wiki/Iris_flower_data_set
+browseURL("https://en.wikipedia.org/wiki/Iris_flower_data_set")
 iris
 
 ##### Explore #####
@@ -31,12 +32,13 @@ class(iris$Species)
 levels(iris$Species)
 
 ### Accessing values in data frames ####
-# read cran.r-project.org/doc/manuals/r-release/R-intro.html
+browseURL("http://cran.r-project.org/doc/manuals/r-release/R-intro.html")
+
 
 # R indexes start at 1 (one), not 0 (zero)
 iris[1, 1]
 
-# A , (comma) means give me everything
+# A , (comma blank) means give me everything
 iris[1, ]
 
 # Ranges of rows, subjset attributes by name
