@@ -59,6 +59,7 @@ We will step through the process with small data sets and the R statistical prog
 - Working with data frames in R
 - Getting more info: class, dim, str, summary
 - Accessing rows and columns
+- Visualizing the data
 - Partitioning the Data
 - Define the model
 - Fit the model to the training data
@@ -69,7 +70,7 @@ We will step through the process with small data sets and the R statistical prog
 ## How do we do better?
 - Feature selection (Boruta package)
 - Algorithms (Deep learning, GBM, GLM)
-- Big data (more data = more signal)
+- More data (more data = more signal)
 
 ## What now?
 

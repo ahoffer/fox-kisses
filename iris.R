@@ -14,7 +14,7 @@ set.seed(1)
 browseURL("https://en.wikipedia.org/wiki/Iris_flower_data_set")
 iris
 
-##### Explore #####
+##### Explore the Data #####
 class(iris)   # discuss data frames
 dim(iris)
 names(iris)
@@ -25,7 +25,7 @@ summary(iris)
 ##### Learn about R #####
 # What will this produce?
 class("I am a string")
-class('a')
+class('a')  # discuss vectors
 class(iris$Species)
 
 # Factors. 'Cause most statistician come out of the social sciences.
@@ -33,7 +33,6 @@ levels(iris$Species)
 
 ### Accessing values in data frames ####
 browseURL("http://cran.r-project.org/doc/manuals/r-release/R-intro.html")
-
 
 # R indexes start at 1 (one), not 0 (zero)
 iris[1, 1]
@@ -52,7 +51,7 @@ iris[49:52,-(1:2)]
 
 # Logical vectors
 iris$Sepal.Length > 7
-iris[iris$Sepal.Length > 7.5, ]$Species
+iris[iris$Sepal.Length > 7, ]$Sepal.Width
 
 ##### Visualize the data #####
 # Trellis plot of iris data
@@ -104,6 +103,7 @@ plot(decisionTree$finalModel)
 testPredictions  = predict(decisionTree, testSet)
 
 # Look at confusion matrix and other metrics
+browseURL("http://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/")
 confusionMatrix(testPredictions, testSet$Species)
 
 # WHAT HAPPENS if we just guess "setosa" for everything?
