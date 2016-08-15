@@ -3,11 +3,14 @@ library(caret)
 # cran.r-project.org/web/packages/caret/vignettes/caret.pdf
 # topepo.github.io/caret/index.html
 # ---------------------------------------------------------
+# install.packages("AppliedPredictiveModeling")
 library(AppliedPredictiveModeling)
+# install.packages("party")
 library(party)
+# install.packages("e1071")
 
 # Make results repeatable
-set.seed(1)
+set.seed(0)
 
 ##### Get Data #####
 # The data is already here!
