@@ -1,0 +1,22 @@
+SPEAKER NOTES
+
+BIG DATA
+- Volume
+  - Ask audience how much data is big?
+  - How about 5 terabytes?
+- Velocity
+  - Ask how fast is big data?
+  - How about a 1 GB/s ?
+- Variety
+  - Click streams and server logs
+  - Sensors - cars, oil fields, satelites, facebook posts
+- Veracity
+  - Most data is crap
+  - Project Guttenburg
+    - Aristotle's Ethics=646 KB. 
+    - Complete works of Shakespeare=5.3 MB
+    
+Small Data - Stats packages like R. In memory, single threaded
+Big Data - Distributed, data center, infrastructure, $$$
+Pioneers - Physicists
+Real life big data + machine learning = Netflix challenge
