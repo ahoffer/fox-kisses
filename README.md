@@ -1,6 +1,6 @@
 # Introduction to Machine Learning with R
 
-This presentation is a non-theoretical introduction to machine learning. The presentation is intended to last about an hour. We start with a discussion of the biggest buzzwords in this field: data science, machine learning, and big data. We will have a high-level look at each one and why all three tend to come up in the same conversations. 
+This presentation is a non-theoretical introduction to machine learning. The presentation is intended to last about an hour. We start with a discussion of the biggest buzzwords in this field: data science, machine learning, and big data. We will take a high-level look at each one and discuss why all three tend to come up in the same conversations. 
 
 We will spend the majority of the time solving a classification problem using the programming language R. Classification is a common machine learning task where a model is "trained" to identity something. We will use a machine learning library for R to train a decision tree to classify different species of plants. 
 
@@ -11,8 +11,7 @@ Finally, we will talk about machine learning and R resources, big data, and how 
 - Data Science
 - What is R?
 - Machine learning
-- The Iris data set
-- The leaf data set
+- The iris data set
 - How do we do better?
 - Big data
 - Resources

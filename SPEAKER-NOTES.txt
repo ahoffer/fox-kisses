@@ -1,4 +1,19 @@
-SPEAKER NOTES
+--SPEAKER NOTES--
+
+START
+  - Introduce self. Connexta. Data Science Coursera
+  - What do these buzz words mean? data science, machine learning 
+  - Cover outline
+
+IRIS
+-Confusion matrix
+  -TP/FP
+  -Confidence interval - sample size and strength of result
+  - P-value. If p smaller than 0.05, results are "statistically significant"
+  - Kappa. How much better than random guessing?
+-Other
+ - Sensitivity. How likey am I to miss one of these?
+ - Specificity. How likely am I to mistake something for one of these?
 
 BIG DATA
 - Volume
@@ -15,8 +30,7 @@ BIG DATA
   - Project Guttenburg
     - Aristotle's Ethics=646 KB. 
     - Complete works of Shakespeare=5.3 MB
-    
-Small Data - Stats packages like R. In memory, single threaded
-Big Data - Distributed, data center, infrastructure, $$$
-Pioneers - Physicists
-Real life big data + machine learning = Netflix challenge
+- Small Data - Stats packages like R. In memory, single threaded
+- Big Data - Distributed, data center, infrastructure, $$$
+- Pioneers - Physicists
+- Real life big data + machine learning = Netflix challenge
