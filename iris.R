@@ -19,14 +19,17 @@ browseURL("https://en.wikipedia.org/wiki/Iris_flower_data_set")
 iris
 
 # Expore the Data ---------------------------------------------------------
-class(iris)   # discuss data frames
-dim(iris)
-names(iris)
+View(iris) # discuss data frames
+class(iris)   
+dim(iris) # rows=observations, columns=variables, 
+names(iris) # independent/dependent variables, predictors/outcome, features/class
 head(iris)
 str(iris)
 summary(iris)
 
-# Learn about R -----------------------------------------------------------
+# More about R -----------------------------------------------------------
+browseURL("http://cran.r-project.org/doc/manuals/r-release/R-intro.html")
+
 # What will this produce?
 class("I am a string")
 class('a')  # discuss vectors
@@ -34,9 +37,6 @@ class(iris$Species)
 
 # Factors. 'Cause most statistician come out of the social sciences.
 levels(iris$Species)
-
-# R Fundamentals ----------------------------------------
-browseURL("http://cran.r-project.org/doc/manuals/r-release/R-intro.html")
 
 # R indexes start at 1 (one), not 0 (zero)
 iris[1, 1]
@@ -60,8 +60,10 @@ iris[iris$Sepal.Length > 7, ]$Sepal.Width
 # Visualize the Data ------------------------------------------------------
 # Trellis plot of iris data
 transparentTheme(trans = 0.4)
-featurePlot(x = iris[, 1:4],
-            y = iris$Species,
+featureVectors =  iris[, 1:4]
+classes = iris$Species
+featurePlot(x = featureVectors,
+            y = classes,
             plot = "pairs",
             auto.key = list(columns = 3))
 
@@ -75,21 +77,18 @@ trainingSet = iris[trainingIndexes, ]
 testSet = iris[-trainingIndexes, ]
 
 # Train a Decision Tree -------------------------------------------------------
-# Create a model by defining the independent and dependent variables
+# Create and train a model by defining the independent and dependent variables
 model = Species ~ .
-decisionTree = train(model, trainingSet, method="ctree")
+classifier = train(model, trainingSet, method="ctree")
 
 # Decision trees are human-readable and very intuitive
-plot(decisionTree$finalModel)
+plot(classifier$finalModel)
 
 # Evaluate the Classifier  -------------------------------------------------------
-# How well did we do on the test data?
-
 # Predict the results for the test set
-testPredictions  = predict(decisionTree, testSet)
+testPredictions  = predict(classifier, testSet)
 
 # Look at confusion matrix and other metrics
-browseURL("http://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/")
 confusionMatrix(testPredictions, testSet$Species)
 
 # Exploring Confusion Models -------------------------------------------------------
@@ -106,5 +105,3 @@ confusionMatrix(guessesWithCorrectProportions,  testSet$Species)
 # WHAT HAPPENS if we guess randomly? (WITH replacment)
 guesses = sample(testSet$Species, length(testPredictions), replace = TRUE)
 confusionMatrix(guesses,  testSet$Species)
-
-

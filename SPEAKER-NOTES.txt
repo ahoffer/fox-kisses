@@ -1,5 +1,15 @@
 SPEAKER NOTES
 
+IRIS
+-Confusion matrix
+  -TP/FP
+  -Confidence interval - sample size and strength of result
+  - P-value. If p smaller than 0.05, results are "statistically significant"
+  - Kappa. How much better than random guessing?
+-Other
+ - Sensitivity. How likey am I to miss one of these?
+ - Specificity. How likely am I to mistake something for one of these?
+
 BIG DATA
 - Volume
   - Ask audience how much data is big?
